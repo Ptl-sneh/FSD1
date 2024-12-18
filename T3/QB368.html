@@ -1,3 +1,4 @@
+<!-- Write an HTML script using bootstrap to design a page of newspaper having three articles by showing only titles initially. Script should enable a render to open a particular article viewing and clicking its title and close it by clicking it again. If render opens any other article, then previous article should disappear -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div id = "main">
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-primary" data-toggle="collapse" data-target="#news1">
+                    <p>India's Reaction To Avoiding Follow-On In 3rd Australia Test Receives Big Verdict: "Can't Control..."</p>
+                </button>
+            </div>
+            <div class="collapse" id = "news1" data-parent="#main">
+                <div class="card-body">
+                    <p>India's Reaction To Avoiding Follow-On In 3rd Australia Test Receives Big Verdict: "Can't Control..."Nathan Lyon said a
+                    few of his team members were surprised over the reaction of members of the Indian team over avoiding the follow-on on
+                    Day Four of the third Test at Gabba.Indo-Asian News ServiceUpdated: December 18, 2024 08:37 am ISTRead Time: 3 min
+                    
+                    India's Reaction To Avoiding Follow-On In 3rd Australia Test Receives Big Verdict: "Can't Control..."
+                    Akash Deep (L) and Jasprit Bumrah© AFP
+                    Australia's veteran off-spinner Nathan Lyon said a few of his team members were surprised over the reaction of members
+                    of the Indian team over avoiding the follow-on on Day Four of the third Test at Gabba. At the Gabba, the last wicket
+                    partnership between Jasprit Bumrah and Akash Deep helped India avoid the follow-on and averted a potential innings
+                    defeat. As soon as Akash got a thick outside edge over gully for four off Pat Cummins, it led to jubilant reactions and
+                    high-fives amongst captain Rohit Sharma, head coach Gautam Gambhir and talismanic batter Virat Kohli.
+                    
+                    “There's a few of us who spoke about (how we're) surprised about their reaction. We have played well and driven the game
+                    to where we are. Frustrating but we are still sitting in the changing room 185 in front. I still feel if we bat well, we
+                    can push for an Australian win.”</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <a href="#news2" class="card-link" data-toggle="collapse">
+                    <p>News2</p>
+                </a>
+            </div>
+            <div class="card-body">
+                <div class="collapse" id="news2" data-parent="#main">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam aspernatur quisquam veritatis. Nesciunt sint cupiditate, aperiam iusto magnam architecto exercitationem soluta in. Eaque id reprehenderit libero ducimus quod numquam accusantium, ex est, consequuntur quisquam officia ratione porro? Cum veniam tempora facere voluptate, soluta fugit neque quisquam modi laboriosam quo?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-primary" data-toggle="collapse" data-target="#news3">
+                    <p>news3</p>
+                </button>
+            </div>
+            <div class="collapse" data-parent="#main" id = "news3">
+                <div class="card-body">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, facere iure hic maxime rem repudiandae sint dolorem voluptatem expedita, officiis molestiae earum error dicta impedit, ex in sequi praesentium. Vitae earum excepturi vero cum. Illo, facilis. Impedit delectus deserunt nam consectetur obcaecati mollitia quam voluptate maxime ab? Suscipit, sunt repellat!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
