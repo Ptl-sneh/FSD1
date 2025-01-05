@@ -1,6 +1,7 @@
 var num;
 function fun() {
     num = prompt("Enter a number: ");
+    console.log(typeof(num));
     var result = happynumber(num);
     
     if (result) {
@@ -11,6 +12,8 @@ function fun() {
 }
 
 function happynumber(n1) {
+    console.log(typeof(n1));
+
     var sum = 0;
     while (n1 > 0) {
         r = n1 % 10;
