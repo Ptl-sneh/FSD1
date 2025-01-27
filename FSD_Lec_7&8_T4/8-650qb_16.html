@@ -1,0 +1,49 @@
+<!--
+calculate distance between two points . Take two points . take two points object consisting x,y,z members
+first object should be used to call distance function , second object is passed to function as argument .
+ 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function distance(p1, p2) {
+      //     let x1 = p1.x;
+      //     let y1 = p1.y;
+      //     let z1 = p1.z;
+      //     let x2 = p2.x;
+      //     let y2 = p2.y;
+      //     let z2 = p2.z;
+      //     let distance = Math.sqrt(
+      //       (x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2
+      //     );
+      //     return distance;
+      //   }
+      //   let p1 = { x: 1, y: 2, z: 3 };
+      //   let p2 = { x: 4, y: 5, z: 6 };
+      //   console.log(distance(p1, p2));
+      class Point {
+        constructor(x, y, z) {
+          this.x = x;
+          this.y = y;
+          this.z = z;
+        }
+        distance = (obj2) => {
+          return Math.sqrt(
+            (obj2.x - obj1.x) ** 2 +
+              (obj2.y - obj1.y) ** 2 +
+              (obj2.z - obj1.z) ** 2
+          );
+        };
+      }
+      let obj1 = new Point(1, 1, 1);
+      let obj2 = new Point(2, 2, 2);
+      console.log(obj1.distance(obj2));
+    </script>
+  </body>
+</html>

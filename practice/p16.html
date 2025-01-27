@@ -1,0 +1,40 @@
+<!-- Write a JavaScript that handles following mouse events. Add necessary
+elements.
+(i)JavaScript gives the key code for the key pressed.
+(ii)If the key pressed is “a”,”e”,”i”,”o”,”u”, the script should announce that
+vowel is pressed.
+(iii)When the key is released background should change to blue -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun() {
+        document.getElementById("keyup").style.backgroundColor = "cyan";
+      }
+
+      function fun1(event) {
+        document.getElementById("keyup").style.backgroundColor = "lightblue";
+        var key = event.key;
+        alert(even.keyCode);
+        var key = event.key;
+        alert(event.keyCode);
+      }
+
+      function fun2(event) {
+        var key = event.key;
+
+        alert(event.keyCode);
+      }
+    </script>
+  </head>
+  <body
+    id="keyup"
+    onkeyup="fun()"
+    onkeydown="fun1(event)"
+    onkeypress="fun2(event)"
+  ></body>
+</html>

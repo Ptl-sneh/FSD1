@@ -1,0 +1,26 @@
+<!-- Write a JAVAScript to print characters of a string at odd positions.(for
+example for the string India, I, d and a should get printed). 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const string = prompt("Enter a string:");
+        let out = ""; 
+        for (let i = 0; i<=string.length ; i++){
+            if(i%2 != 0){
+                out += string[i];
+            }
+        }
+        console.log(out);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

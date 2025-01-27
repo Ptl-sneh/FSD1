@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script>
+      function fun(id) {
+        id.innerHTML = "mouse over";
+        id.style.backgroundColor = "blue";
+      }
+
+      function fun2(id) {
+        id.innerHTML = "mouse out";
+        id.style.backgroundColor = "green";
+      }
+    </script>
+  </head>
+  <body>
+    <script></script>
+    <div
+      onmouseover="fun(this)"
+      onmouseout="fun2(this)"
+      style="height: 400px; width: 500px; background-color: yellow"
+    ></div>
+  </body>
+</html>

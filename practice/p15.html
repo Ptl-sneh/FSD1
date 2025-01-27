@@ -1,0 +1,29 @@
+<!-- Write a JS to check that given no. is perfect no. or not. For ex. 6 is a perfect
+no., bcoz the factors of 6 are 1,2,3 & 6. So addition of all factors excluding
+no. itself is 6. So it is a perfect no. Likewise 28 is also a perfect no.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let j = 1;
+      while (j <= 1000) {
+        let sum = 0;
+        for (let i = 0; i < j; i++) {
+          if (j % i == 0) {
+            sum += i;
+          }
+        }
+        if (sum == j) {
+          console.log(`${j} is a perfect number`);
+        }
+        j++;
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

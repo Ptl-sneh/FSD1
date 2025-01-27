@@ -1,0 +1,26 @@
+<!-- Write a JavaScript program which accepts N as input and print N Fibonacci
+numbers as list -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const num = parseInt(prompt("Enter a number:"))
+        fibb(num)
+        function fibb(num , a = 0 , b = 1) {
+            if (num == 0){
+                return;
+            }else{
+                console.log(a);
+                fibb(num-1,b,b+a)
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

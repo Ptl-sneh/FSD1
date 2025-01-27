@@ -1,0 +1,29 @@
+<!-- Design a form using HTML and JavaScript that asks the user to enter his
+date of birth and on clicking the Calculate Button it calls the function that
+calculates how many days are left in your birthday? -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun() {
+        let date = new Date();
+        let bd = document.getElementById("birthdate").value;
+        let bday = new Date(bd);
+        let diff = bday.getTime() - date.getTime();
+        let days = Math.floor(diff / (24 * 60 * 60 * 1000));
+        document.getElementById("output").innerHTML = `Days are left in your birthday: ${days}`;
+      }
+    </script>
+  </head>
+  <body>
+    Enter your birthdate:
+    <input type="date" id="birthdate" name="bd" />
+    <input type="submit" onclick="fun()" />
+
+    <p id="output"></p>
+  </body>
+</html>

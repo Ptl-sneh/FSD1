@@ -1,0 +1,19 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      function call() {
+        pid = document.getElementById("p1");
+        pid.setAttribute("align", "right");
+        // or
+        // pid.align="center";
+        pid.style.color = "red";
+        // or
+        // pid.style.frontStyle="italic"
+      }
+    </script>
+    <p id="p1" onclick="call(this)">HI THERE</p>
+    <!-- <input type="button" onclick="call()" value="click" /> -->
+    <h1 onclick="this.style.color='green' ">How are you</h1>
+  </body>
+</html>

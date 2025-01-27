@@ -1,0 +1,61 @@
+<!-- Design a registration form with username and password and email fields
+using HTML and JavaScript. Perform following validations.
+(i) Username field: minimum length5 and maximum length 10 characters, it
+should not start with special charcters
+ (ii) Password field: it must contain at least one digit and at least one special
+character
+(iii)Email field: it must follow proper email syntax(for ex.,
+xyz.pqr@mnp.co.in)
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script>
+        function func() {
+        let uname = document.getElementById("username").value;
+        let pwd = document.getElementById("password").value;
+        let email = document.getElementById("email").value;
+        console.log(uname);
+        console.log(pwd);
+        let username = /^(\w{5,10})/
+        let cdigit = /(\d+)/
+        let emailRe = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}?)+$/ 
+        // console.log(uname);
+        
+            if (username.test(uname)){
+                alert("valid")
+            }else{
+                alert("invalid")
+            }
+            if(cdigit.test(pwd) && csp.test(pwd)){
+                alert("valid password")
+            }else{
+                alert("invalid password")
+            }
+            if(emailRe.test(email)){
+                alert("valid email")
+            }else{
+                alert("invalid email")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" id = "form">
+        Username:
+        <input type="text" id ="username" name="un">
+        <br><br>
+        Password:
+        <input type="text" id ="password" name="pwd">
+        <br><br>
+        email:
+        <input type="text" id = "email" name="em">
+        <input type="submit" onclick="func()">
+    </form>
+
+</body>
+</html>

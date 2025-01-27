@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <script>
+      function red() {
+        pid = document.getElementById("p1");
+        // pid.setAttribute("bg-color", "red");
+        // or
+        // pid.align="center";
+        pid.style.backgroundColor = "red";
+        // or
+        // pid.style.frontStyle="italic"
+      }
+      function green() {
+        pid = document.getElementById("p1");
+        pid.style.backgroundColor = "green";
+      }
+      function bold() {
+        pid = document.getElementById("p2");
+        pid.style.fontWeight = "bold";
+      }
+      function Upper() {
+        pid = document.getElementById("p3");
+        pid.style.textTransform = "uppercase";
+      }
+      function Lower() {
+        pid = document.getElementById("p4");
+        pid.style.textTransform = "lowercase";
+      }
+      function UnderLine() {
+        pid = document.getElementById("p5");
+        pid.style.textDecoration = "underline";
+      }
+      function DarkMode() {
+        // pid = document.getElementById("p1");
+        pid = document.getElementById("p6");
+        // pid.style.backgroundColor = "black";
+        if (document.body.style.backgroundColor == "black") {
+          document.body.style.backgroundColor = "white";
+          pid.style.color = "black";
+          //   document.body.style.color = "black";
+        } else {
+          document.body.style.backgroundColor = "black";
+          pid.style.color = "white";
+          //   document.body.style.color = "white";
+        }
+      }
+    </script>
+  </head>
+  <body id="p1">
+    <input type="button" onclick="red()" value="Red" />
+    <input type="button" onclick="green()" value="green" />
+    <p id="p2" onclick="bold()">This is text</p>
+    <!-- <input type="button" onclick="bold()" value="bold" /> -->
+    <p id="p3" onclick="Upper()">This text to uppercse</p>
+    <!-- <input type="button" onclick="Upper()" value="Upper" /> -->
+    <p id="p4" onclick="Lower()">This text to lower</p>
+    <!-- <input type="button" onclick="Lower()" value="lower" /> -->
+    <p id="p5" onclick="UnderLine()">This text to UnderLine</p>
+    <!-- <input type="button" onclick="UnderLine()" value="underline" /> -->
+    <input type="button" onclick="DarkMode()" value="DarkMode" />
+    <h1 id="p6">Bhai a toh toggle thay che color</h1>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!-- Write an ES6 script that creates a class time having members hours, minutes
+and second. Create two time objects and add both the time objects so that it
+should return in third time object. Third time object should have hour,
+minute and second such that after addition if second exceeds 60 then minute
+should be incremented also if minutes exceeds 60 then hour should be
+incremented. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Time {
+        constructor(h, m, s) {
+          this.hours = h;
+          this.min = m;
+          this.s = s;
+        }
+        add(obj1, obj2) {
+          obj3.hours = obj1.hours + obj2.hours;
+          obj3.min = obj1.min + obj2.min;
+          obj3.s = obj1.s + obj2.s;
+          if (obj3.s > 60) {
+            obj3.s = obj3.s % 60;
+            obj3.min = obj3.min + 1;
+          }
+          if (obj3.min > 60) {
+            obj3.min = obj3.min % 60;
+            obj3.hours = obj3.hours + 1;
+          }
+          return obj3;
+        }
+      }
+      obj1 = new Time(12, 30, 10);
+      obj2 = new Time(12, 40, 60);
+      obj3 = new Time(0, 0, 0);
+      obj3 = obj3.add(obj1, obj2);
+      console.log(`hours : ${obj3.hours} mins : ${obj3.min} sec : ${obj3.s}`);
+    </script>
+  </head>
+  <body></body>
+</html>

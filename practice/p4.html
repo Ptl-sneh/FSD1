@@ -1,0 +1,31 @@
+<!-- Write java script function to find factorial of number entered by user. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const num = prompt("Enter a number to find factorial of it:");
+        let fact = 1;
+        let i = 1;
+        result = factorial(num)
+        function factorial(num){
+            if (num == 0){
+                fact = 1;
+            }else{
+                while (i<=num) {
+                    fact = fact*i;
+                    i++;
+                }
+            }
+            return fact;
+        }
+        console.log(`The factorial of ${num} is ${result}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

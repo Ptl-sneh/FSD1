@@ -1,0 +1,37 @@
+<!-- write the JS program to check which mouse button is clicked (left , right or middle) 
+    onmouserup and onmousedown  : this mean we are clicked or continous clicked mouse button then it means it mousedown if it is released then its 
+                                  its mouseup event
+                                  
+    "this" is refferred to object and "event" is refferred to event 
+-->
+<html>
+  <head>
+    <script>
+      function fun(e) {
+        val = e.button;
+        switch (val) {
+          case 0:
+            alert("left click");
+            break;
+          case 1:
+            alert("middle click");
+            break;
+          case 2:
+            alert("right click");
+            break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script></script>
+    <div
+      style="height: 500px; width: 400px; background-color: crimson"
+      onmousedown="fun(event)"
+    ></div>
+    <div
+      style="height: 500px; width: 400px; background-color: cyan"
+      onmouseup="fun(event)"
+    ></div>
+  </body>
+</html>

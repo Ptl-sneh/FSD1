@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Time{
+            constructor(hours, minutes, seconds) {
+                this.hours = hours;
+                this.min = minutes;
+                this.seconds = seconds;
+            }
+            add(obj1,obj2){
+                obj3.hours = obj1.hours + obj2.hours;
+                obj3.min = obj1.min + obj2.min;
+                obj3.seconds = obj1.seconds + obj2.seconds;
+                if (obj3.seconds > 60) {
+                    obj3.seconds = obj3.seconds % 60;
+                    obj3.min = obj3.min + 1;
+                }
+                if(obj3.min > 60){
+                    obj3.min = obj3.min % 60;
+                    obj3.hours = obj3.hours + 1;
+                }
+                return obj3;
+            }
+        }
+        obj1 = new Time(12,30,10)
+        obj2 = new Time(12,60,60)
+        obj3 = new Time(0,0,0)
+        obj3.add(obj1,obj2)
+        console.log(`hour : ${obj3.hours} minutes : ${obj3.min} seconds : ${obj3.seconds}`);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- Write a JS to copy contents of textfield to a paragraph in lowecase after
+entering string and losing the focus. Background of textfield should be
+converted to red after losing focus -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(){
+            let x = document.getElementById("textfield").value;
+            document.getElementById("para").innerHTML = x.toLowerCase();
+            document.getElementById("textfield").style.backgroundColor = "red";
+        }
+    </script>
+</head>
+<body>
+    Enter a String:
+    <input type="text" id = "textfield" onblur = "fun1()">
+    <p id="para"></p>
+</body>
+</html>

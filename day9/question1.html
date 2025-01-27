@@ -1,0 +1,22 @@
+<!-- write an es6 function to be called on click take one div with some text and no decoration initially take font size and font style as default argument and pass bg color and font color while passing argument  to function -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        myFun = (bg_color,font_color,font_size = "25px",font_style = "italic") => {
+            document.getElementById("div1").style.backgroundColor = bg_color
+            document.getElementById("div1").style.color = font_color
+            document.getElementById("div1").style.fontSize = font_size
+            document.getElementById("div1").style.fontStyle = font_style
+        }
+    </script>
+</head>
+<body>
+    <div id = "div1">Patel Sneh</div>
+    <button value="click" onclick="myFun('red','cyan')">click</button>
+</body>
+</html>

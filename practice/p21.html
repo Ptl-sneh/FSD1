@@ -1,0 +1,30 @@
+<!-- Write a JavaScript that uses function to calculate days left until next
+Christmas using JavaScript.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun() {
+        let date = new Date();
+        let bday = new Date();
+        bday.setDate(25)
+        bday.setMonth(11)
+        let diff = bday.getTime() - date.getTime();
+        let days = Math.floor(diff / (24 * 60 * 60 * 1000));
+        document.getElementById("output").innerHTML = `Days are left in your birthday: ${days}`;
+      }
+    </script>
+  </head>
+  <body>
+    click below to calculate days left 
+    <br>
+    <input type="submit" value="click" onclick="fun()" />
+
+    <p id="output"></p>
+  </body>
+</html>

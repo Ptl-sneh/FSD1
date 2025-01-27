@@ -1,0 +1,24 @@
+<!-- Write a JavaScript that handles following form events. Add one input field.
+(i)If the field is in focus change its background color to red.
+(ii)Change text to uppercase only when the value of a field is changed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function func(){
+            document.getElementById("name").style.textTransform = "uppercase"
+        }
+        function fun2(){
+            document.getElementById("name").style.backgroundColor = "red";
+        }
+    </script>
+</head>
+<body>
+    Enter your Name:
+    <input type="text" id = "name" onchange="func()" onfocus="fun2()">
+</body>
+</html>

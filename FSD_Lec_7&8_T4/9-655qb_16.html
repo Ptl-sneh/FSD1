@@ -1,0 +1,34 @@
+<!-- Write a javascript/html to add a heading, an image and a button. Initially,
+display “Hello World” text as a heading and image “img1.png” without any
+decoration. A function to be called on button click and perform tasks as
+asked below.
+1.Pass 3 parameters for font size, font color and text.
+2.The text parameter must be passed as a default parameter with “Good
+Morning” value.
+3.Another two parameters (font size, font color) must be passed as
+arguments while calling the function on button click.
+4.Also, change image to “img2.png” by clicking on button. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function changeText(Size, fontColor, text = "Good Morning") {
+        document.getElementById("pid").innerHTML = text;
+        document.getElementById("pid1").src = "2.jpg";
+        document.getElementById("pid").style.fontSize = Size;
+        document.getElementById("pid").style.color = fontColor;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="pid">Hello World</h1>
+    <img id="pid1" src="1.jfif" height="168px" width="300px" />
+    <br />
+    <input type="button" value="submit" onclick="changeText('50px','Green')" />
+    <button>Click</button>
+  </body>
+</html>

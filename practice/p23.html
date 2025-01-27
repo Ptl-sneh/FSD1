@@ -1,0 +1,56 @@
+<!-- Design an HTML form & write JavaScript code to validate the Name, Phone
+Number & E-mail address using Regular Expression. Name only allows
+letters & underscore; Phone number only allows digits & E-mail address
+allow all type of combination except only special character. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var cname = /^[A-Za-z_]+$/
+            // var cphone = /^\d{10}$/
+            let cdigit = /^[98]/
+            let cdigit1 = /\d{9}$/
+            var cemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}?)+$/
+
+            if(cname.test(name)){
+                alert("valid name")
+            }else{
+                alert("invalid name")
+            }
+            if(cdigit.test(phone) && cdigit1.test(phone)){
+                alert("valid phone")
+            }else{
+                alert("invalid phone")
+            }
+            if(cemail.test(email)){
+                alert("valid email")
+            }else{
+                alert("invalid email")
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form action="" id = "form">
+        Name:
+        <input type="text" id = "name">
+        <br><br>
+        Phone Number:
+        <input type="text" id = "phone">
+        <br><br>
+        email:
+        <input type="email" id = "email">
+        <br><br>
+        <input type="submit" onclick="fun()">
+    </form>
+</body>
+</html>

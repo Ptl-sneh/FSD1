@@ -1,0 +1,34 @@
+<!-- show the validation using js with simple form having fields like name,contact number and email address -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        email_pat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w)*(\.\w{2,3})+$/
+        name = document.getElementById("name").value
+        c_n = document.getElementById("c_n").value
+        email = document.getElementById("email").value
+        function fun(){
+            if(email_pat.test(email)){
+                alert("valid")
+            }else{
+                alert("invalid")
+            }
+        }   
+    </script>
+</head>
+<body>
+    <form action="">
+        Name:
+        <input type="text" id = "name">
+        Contact Number:
+        <input type="text" id = "c_n">
+        Email:
+        <input type="text" id = "email">
+        <input type="submit" onclick="fun()">
+    </form>
+</body>
+</html>

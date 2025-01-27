@@ -1,0 +1,27 @@
+<!-- Write a JS to solve following series by given x and n values from user: 1-x+x^2-x^3+x^4-x^5+…+x^n
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p id = "ans"></p>
+        <script>
+        let n = prompt("Enter a number for power");
+        let x = prompt("Enter a number for base")
+        let sum = 0;
+        fun()
+        function fun(){
+            for (i = 0; i <= n; i++) {
+                sum = sum + ((-1) ** i) * Math.pow(x, i);
+            }
+            return document.getElementById("ans").innerHTML = sum;
+        }
+    </script>
+</body>
+</html>

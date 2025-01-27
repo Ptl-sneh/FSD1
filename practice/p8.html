@@ -1,0 +1,33 @@
+<!-- Write a JavaScript that uses function to calculate how many days are left in
+your birthday?
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let date = new Date();
+        let dayleft = 0;
+        daysLeft()
+        function daysLeft() {
+            let bd = new Date();
+            let bdate = prompt("Enter a your dirthdate:")
+            bd.setDate(bdate);
+            let month = prompt("Enter your month of birth:");
+            bd.setMonth(month);
+            dayleft = bd.getTime() - date.getTime();
+            console.log(date.getTime());
+            console.log(bd.getTime());
+            console.log(dayleft);
+            dayleft = Math.floor(dayleft / (24*60*60*1000));
+            console.log(`Days left in your birthdate is ${dayleft}`);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

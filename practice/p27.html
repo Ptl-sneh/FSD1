@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Point{
+            constructor(x, y,z) {
+                this.x = x;
+                this.y = y;
+                this.z = z;
+            }
+            distance = (obj2) =>{
+                return (Math.sqrt((obj1.x-obj2.x)**2 + (obj1.y-obj2.y)**2 + (obj1.z-obj2.z)**2))
+            }     
+        }
+        obj1 = new Point(1,1,1);
+        obj2 = new Point(2,2,2);
+        result = obj1.distance(obj2);
+        console.log(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- Write a JavaScript to accept a number from user & check whether it is
+Armstrong number or not. (Hint: Armstrong number means the summation
+of cubes of all the three digits of the number should be exactly to the
+number)
+E.g., 153= (1*1*1) +(5*5*5) +(3*3*3) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num = prompt("Enter a number:");
+        length = num.length;
+        console.log(typeof(num));
+        let temp1 = parseInt(num)
+        console.log(typeof(temp1));
+        
+        
+        let sum = 0;
+        let temp = num;
+        console.log(typeof(temp));
+
+        while (temp>0){
+            let r = temp%10;
+            sum = sum + Math.pow(r, length);
+            temp = Math.floor(temp/10);
+        }
+        if (sum == num){
+            console.log(`${num} is a armstrong number`);
+        }else{
+            console.log(`${num} is not a armstrong number`);
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!-- 
+    Events:-
+        1) onclick
+        2) onchange
+
+-->
+
+<!--   onclick example  -->
+
+
+<!-- without this keyword -->
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div onclick="fun()" id="a1">
+            ABCD
+        <div>
+        <script language="javascript" type="text/javascript">
+            function fun(){
+                c1=document.getElementById('a1');
+                c1.innerHTML='welcome';
+                c1.style.color="red";
+                c1.style.fontStyle="italic";
+                c1.style.backgroundColor="cyan"
+            }
+        </script>
+    </body>
+</html>
+<br><br><br>
+
+<!-- with this keyword -->
+<!-- <html>
+    
+    <body>
+        <div onclick="fun(this)">
+            ABCD
+        <div>
+        <script language="javascript" type="text/javascript">
+            function fun(id){
+                id.innerHTML='welcome';
+                id.style.color="black";
+                id.style.fontStyle="italic";
+                id.style.backgroundColor="grey"
+            }
+        </script>
+    </body>
+</html> -->
+
+
+<!--   onclick example  -->

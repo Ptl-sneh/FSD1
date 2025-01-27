@@ -1,0 +1,50 @@
+<!-- Write a JS to print all number from 1-100 by adhering following condition:
+print only those number whose reverse of square and square of reverse are
+same. For ex. Square(12)=144, Reverse(144)=441 and
+Reverse(12)=21,Square(21)=441. so, final results of both the cases are
+same.Print all numbers following these cases between 1-100.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let i = 1;
+        while (i <= 100){
+            let square = i*i;
+            // console.log(`square ${square}`);
+            
+            let temp = i;
+            let reverse = 0;
+            while(temp>0){ 
+                r = temp % 10;
+                reverse = reverse * 10 + r;
+                temp = Math.floor(temp/10);
+            }
+            // console.log(`reverse ${reverse}`);
+
+            let squareReverse = 0;
+            let temp2 = square;
+            // console.log(`temp2 ${temp2}`);
+            
+            while(temp2>0){
+                r = temp2 % 10;
+                squareReverse = squareReverse * 10 + r;
+                temp2 = Math.floor(temp2/10);
+            }
+            // console.log(`square reverse ${squareReverse}`);
+
+            if (squareReverse == (reverse**2)){
+                console.log(i);
+            }
+            i++;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

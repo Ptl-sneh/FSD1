@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+            a = document.getElementById("p1").value
+            pat = /\W/
+            pat1 = /[A-z]/
+            pat2 = /[0-9]/
+            pat3 = /[A-z0-9\W]/
+            console.log(a.length)
+            if(a.length >=8 && a.length <=12){
+                if (pat1.test(a) && pat2.test(a) && pat.test(a)){
+                    alert("Password is valid");
+                }else{
+                    alert("Password is invalid")
+                }
+            }else{
+                alert("Password is invalid")
+            }
+        }
+    </script>
+</head>
+<body>
+    password:
+    <input type="text" id = "p1">
+    <br>
+    <input type="submit" onclick="fun()">
+</body>
+</html>
